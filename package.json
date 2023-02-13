@@ -5,7 +5,9 @@
     "main": "index.js",
     "scripts": {
         "dev": "nodemon src/server.ts",
-        "test": "NODE_OPTIONS=--experimental-vm-modules npx dotenv -e .env.test npx jest -i"
+        "test": "NODE_ENV=test jest -i",
+        "test:coverage": "npm run test -- --coverage",
+        "test:cli": "npx dotenv -e .env.test npx jest -- -i"
     },
     "keywords": [],
     "author": "",
